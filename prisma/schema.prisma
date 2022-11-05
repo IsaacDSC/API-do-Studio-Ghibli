@@ -9,3 +9,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Movies {
+  id          String   @id @default(uuid())
+  title       String
+  originalTitle String
+  description String
+  releaseDate String
+  score        Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
