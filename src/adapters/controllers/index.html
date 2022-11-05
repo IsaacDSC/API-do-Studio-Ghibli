@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API- Documentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="card mt-5">
+      <h1 class="text-center">MOVIES API</h1>
+      <hr>
+      <div class="row">
+        <div class="col-4">
+          <div class="container">
+            <h4 class="text-center">Starting using docker-compose</h4>
+            <hr>
+            <ul>
+              <li>
+                <p>docker-compose up</p>
+              </li>
+              <li>
+                <p>yarn</p>
+              </li>
+              <li>
+                <p>yarn prisma db push</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container">
+            <h4 class="text-center">Stating tests</h4>
+            <hr>
+            <ul>
+              <li>
+                <p>yarn test:movies:service</p>
+              </li>
+              <li>
+                <p>yarn test:movies:resolver</p>
+              </li>
+              <li>
+                <p>yarn test:movies:end2end</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container">
+            <h4 class="text-center">Starting not using Docker</h4>
+            <hr>
+            <ul>
+              <li>
+                <p>yarn</p>
+              </li>
+              <li>
+                <p>yarn prisma db generate</p>
+              </li>
+              <li>
+                <p>yarn prisma db push || yarn prisma db migrate dev</p>
+              </li>
+              <li>
+                <p>yarn dev</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
