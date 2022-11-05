@@ -1,1 +1,14 @@
+### END POINT EXTERNAL
 GET https://ghibliapi.herokuapp.com/films/?limit=200
+Content-Type: application/json
+
+###### END POINT APPLICATION
+###
+POST http://localhost:3000/api/v1/auto/import/movies
+Content-Type: application/json
+
+{ "quantityMovies": 200 }
+
+### GET MOVIES PAGINATION /api/v1/movies/<numberPage>
+GET http://localhost:3000/api/v1/movies/3
+Content-Type: application/json
