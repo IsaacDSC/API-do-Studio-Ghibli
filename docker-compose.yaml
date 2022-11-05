@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  db:
+    container_name: db
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: movies
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    networks:
+      - sai
+    restart: always
+
+  api-movies:
+    container_name: api-movies
+    image: api-movies
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      # target: development
+    ports:
+      - 3000:3000
+    networks:
+      - sai
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    links:
+      - db
+    depends_on:
+      - db
+    restart: always
+
+networks:
+  sai:
+    driver: bridge
+
+volumes:
+  database-data:
+
