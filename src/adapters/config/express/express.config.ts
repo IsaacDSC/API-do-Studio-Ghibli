@@ -21,7 +21,11 @@ class App {
   }
 
   private routes(): void {
-    this.express.use(routes);
+    this.express.get('/', (req, res) => {
+      res.redirect('/api/v1');
+    })
+
+    this.express.use('/api/v1', routes);
   }
 }
 

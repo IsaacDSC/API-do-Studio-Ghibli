@@ -9,8 +9,9 @@ export class RequestAPI {
   async execute(config: AxiosRequestConfig) {
     try {
       return await axios.request(config);
-    } catch (error) {
-      return error;
+    } catch (error: any) {
+      const ResponseError = error?.response ? error?.response : error;
+      return ResponseError;
     }
   }
 
